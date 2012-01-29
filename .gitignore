@@ -5,3 +5,4 @@ obj/
 BackgroundWorker/*.cs*
 BackgroundWorker/Irc*
 BackgroundWorker/Properties/
+PerrySubUpdater.wyp
