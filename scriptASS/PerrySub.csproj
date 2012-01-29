@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="2.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F84660A-980A-4D2E-A51C-F7D87B7B0B2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>scriptASS</RootNamespace>
+    <AssemblyName>PerrySub</AssemblyName>
+    <ApplicationIcon>hisui.ico</ApplicationIcon>
+    <StartupObject>scriptASS.Program</StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <ManifestCertificateThumbprint>45E08D5EEE50C6A25C91CEF4C4513142944CF753</ManifestCertificateThumbprint>
+    <ManifestKeyFile>PerrySub_TemporaryKey.pfx</ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.mrmans0n.net/perrysub/</InstallUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>1</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomaticUpdater, Version=2.6.3.0, Culture=neutral, PublicKeyToken=d2050be9b2e72e40, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\wyBuild\AutomaticUpdater\AutomaticUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="BackgroundWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual Studio 2008\Projects\BackgroundWork\BackgroundWork\bin\x86\Release\BackgroundWork.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.81.0.1407, Culture=neutral, PublicKeyToken=1b03e6acf1164f73" />
+    <Reference Include="MediaInfoWrapper, Version=0.7.4.4, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\megui\MediaInfoWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHunspell, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\mrm\Desktop\NHunspell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Edit\SpellCheckW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\SpellCheckW.Designer.cs">
+      <DependentUpon>SpellCheckW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileAssociation.cs" />
+    <Compile Include="Interfaces\IVideoProvider.cs" />
+    <Compile Include="Misc\AddFrames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\AddFrames.Designer.cs">
+      <DependentUpon>AddFrames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wrap\FFMS2 Wrapper Index.cs" />
+    <Compile Include="Wrap\FFMS2 Wrapper VideoSource.cs" />
+    <Compile Include="Wrap\PerryHunspell.cs" />
+    <Compile Include="Wrap\CultureWrapper.cs" />
+    <Compile Include="Funciones\AnalizarBusquedaArchivos.cs" />
+    <Compile Include="Edit\FontSelectionW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FontSelectionW.Designer.cs">
+      <DependentUpon>FontSelectionW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\findOthersW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\findOthersW.Designer.cs">
+      <DependentUpon>findOthersW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FontExtractorW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FontExtractorW.Designer.cs">
+      <DependentUpon>FontExtractorW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ASSTextBoxRegExDefaultContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Edit\translateW_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\translateW_Popup.Designer.cs">
+      <DependentUpon>translateW_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Postprocesado\SceneDetection\AverageRGBDiffDetectionStrategy.cs" />
+    <Compile Include="Postprocesado\SceneDetection\Capture.cs" />
+    <Compile Include="Postprocesado\SceneDetection\ISceneDetectionStrategy.cs" />
+    <Compile Include="Postprocesado\SceneDetection\MediaSampleEventArgs.cs" />
+    <Compile Include="Postprocesado\SceneDetection\SampleDataEventArgs.cs" />
+    <Compile Include="Postprocesado\SceneDetection\SceneDetector.cs" />
+    <Compile Include="Clases\VideoInfo.cs" />
+    <Compile Include="Controles\RichTextBoxWithSpecialUnderlines.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wrap\FontUtil.cs" />
+    <Compile Include="Misc\aboutW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\aboutW.Designer.cs">
+      <DependentUpon>aboutW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\ChooseTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\ChooseTrack.Designer.cs">
+      <DependentUpon>ChooseTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funciones\AdjustToKeyframe.cs" />
+    <Compile Include="Funciones\AnalizarLineas.cs" />
+    <Compile Include="Clases\crc32.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Edit\attachmentsW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\attachmentsW.Designer.cs">
+      <DependentUpon>attachmentsW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\attachmentASS.cs" />
+    <Compile Include="Clases\Attachments.cs" />
+    <Compile Include="Edit\FindReplace\findW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FindReplace\findW.Designer.cs">
+      <DependentUpon>findW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\LineArrayList.cs" />
+    <Compile Include="Misc\demuxProgressW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\demuxProgressW.Designer.cs">
+      <DependentUpon>demuxProgressW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parciales Main\MediaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\autoSaveW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\autoSaveW.Designer.cs">
+      <DependentUpon>autoSaveW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\animationW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\animationW.Designer.cs">
+      <DependentUpon>animationW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\v2W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\v2W.Designer.cs">
+      <DependentUpon>v2W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\headerASS.cs" />
+    <Compile Include="Parciales Main\SubtitleFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\SubtitleScript.cs" />
+    <Compile Include="Controles\RichTextBoxPrintCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Edit\FindReplace\replaceW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FindReplace\replaceW.Designer.cs">
+      <DependentUpon>replaceW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\UndoRedo.cs" />
+    <Compile Include="Opciones\undoRedoW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\undoRedoW.Designer.cs">
+      <DependentUpon>undoRedoW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\SeparaSilabas.cs" />
+    <Compile Include="Clases\VersionInfo.cs" />
+    <Compile Include="Clases\RPC_Client.cs" />
+    <Compile Include="Edit\translateW_RPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\translateW_T.cs" />
+    <Compile Include="Edit\templateW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\templateW.Designer.cs">
+      <DependentUpon>templateW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerrySubException.cs" />
+    <Compile Include="Video Menu\Misc\cropW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\Misc\cropW.Designer.cs">
+      <DependentUpon>cropW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parciales Main\AviSynthVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parciales Main\DirectShowVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parciales Main\AudioTiming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parciales Main\VideoTiming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\batchGenW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\batchGenW.Designer.cs">
+      <DependentUpon>batchGenW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ASSTextBoxRegEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clases\ParticleAnimacion.cs" />
+    <Compile Include="Clases\ParticleEngine.cs" />
+    <Compile Include="Clases\SSAParticle.cs" />
+    <Compile Include="Edit\v1W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\v1W.Designer.cs">
+      <DependentUpon>v1W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\EfectosV1.cs" />
+    <Compile Include="Edit\karaokeTimerW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\karaokeTimerW.Designer.cs">
+      <DependentUpon>karaokeTimerW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\K.cs" />
+    <Compile Include="Opciones\preferencesW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\preferencesW.Designer.cs">
+      <DependentUpon>preferencesW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video Menu\Misc\ResolutionInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\Misc\ResolutionInputBox.Designer.cs">
+      <DependentUpon>ResolutionInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video Menu\bitrateCalcW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\bitrateCalcW.Designer.cs">
+      <DependentUpon>bitrateCalcW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\AVSTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Video Menu\avsW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video Menu\avsW.Designer.cs">
+      <DependentUpon>avsW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\brauW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\brauW.Designer.cs">
+      <DependentUpon>brauW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones\fassociationsW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\fassociationsW.Designer.cs">
+      <DependentUpon>fassociationsW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Postprocesado\adjKeyW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Postprocesado\adjKeyW.Designer.cs">
+      <DependentUpon>adjKeyW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ASSDataGridViewColumn.cs" />
+    <Compile Include="Controles\ASSDataGridViewTextBoxCell.cs" />
+    <Compile Include="Wrap\AVIFileWrapper.cs" />
+    <Compile Include="Funciones\AviSynthFunctions.cs" />
+    <Compile Include="Wrap\AvisynthWrapper.cs" />
+    <Compile Include="Funciones\AVStoDirectSound.cs" />
+    <Compile Include="Funciones\BitmapFunctions.cs" />
+    <Compile Include="Postprocesado\concatW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Postprocesado\concatW.Designer.cs">
+      <DependentUpon>concatW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\estiloV4.cs" />
+    <Compile Include="Funciones\FFT.cs" />
+    <Compile Include="Edit\headersW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\headersW.Designer.cs">
+      <DependentUpon>headersW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\IMM32TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wrap\IMM32Wrapper.cs" />
+    <Compile Include="Edit\kanjisW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\kanjisW.Designer.cs">
+      <DependentUpon>kanjisW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Karaoke_K.cs" />
+    <Compile Include="Controles\KeyPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clases\lineaASSidx.cs" />
+    <Compile Include="mainW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainW.Designer.cs">
+      <DependentUpon>mainW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\lineaASS.cs" />
+    <Compile Include="Postprocesado\maxLinesW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Postprocesado\maxLinesW.Designer.cs">
+      <DependentUpon>maxLinesW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\notasW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\notasW.Designer.cs">
+      <DependentUpon>notasW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wrap\FileAccessWrapper.cs" />
+    <Compile Include="Controles\NumericToolStripTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Misc\progressW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\progressW.Designer.cs">
+      <DependentUpon>progressW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Edit\FontSelectionW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FontSelectionW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\findOthersW.resx">
+      <DependentUpon>findOthersW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FontExtractorW.resx">
+      <DependentUpon>FontExtractorW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\aboutW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>aboutW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\AddFrames.resx">
+      <DependentUpon>AddFrames.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\ChooseTrack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChooseTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\animationW.resx">
+      <DependentUpon>animationW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\attachmentsW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>attachmentsW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FindReplace\findW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>findW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FindReplace\replaceW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>replaceW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\v1W.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>v1W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\karaokeTimerW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>karaokeTimerW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\v2W.resx">
+      <DependentUpon>v2W.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\demuxProgressW.resx">
+      <DependentUpon>demuxProgressW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\autoSaveW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>autoSaveW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\preferencesW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>preferencesW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\undoRedoW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>undoRedoW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\templateW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>templateW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\translateW_Popup.resx">
+      <DependentUpon>translateW_Popup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\SpellCheckW.resx">
+      <DependentUpon>SpellCheckW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video Menu\batchGenW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>batchGenW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video Menu\Misc\cropW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cropW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video Menu\Misc\ResolutionInputBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResolutionInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video Menu\bitrateCalcW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>bitrateCalcW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\brauW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>brauW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\fassociationsW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fassociationsW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postprocesado\adjKeyW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>adjKeyW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postprocesado\concatW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>concatW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\headersW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>headersW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\kanjisW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>kanjisW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mainW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postprocesado\maxLinesW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>maxLinesW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\notasW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>notasW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\progressW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>progressW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\sbrowseW.resx">
+      <DependentUpon>sbrowseW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\shiftW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>shiftW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\TimeTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimeTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\translateW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>translateW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video Menu\avsW.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>avsW.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Edit\sbrowseW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\sbrowseW.Designer.cs">
+      <DependentUpon>sbrowseW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Edit\shiftW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\shiftW.Designer.cs">
+      <DependentUpon>shiftW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Tiempo.cs" />
+    <Compile Include="Controles\TimeTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\TimeTextBox.Designer.cs">
+      <DependentUpon>TimeTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\translateW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\translateW.Designer.cs">
+      <DependentUpon>translateW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Funciones\T_LoadFullAudio.cs" />
+    <Compile Include="Funciones\VideoUnitConversion.cs" />
+    <Compile Include="Clases\ZipSubtitleScript.cs" />
+    <Compile Include="Wrap\ZipWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="avisynth.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AvisynthWrapper.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="avss.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="changelog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cygz.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Devil.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DirectShowSource.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffms2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hisui.ico" />
+    <None Include="client.wyc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lang_es_ES.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\moe-49579-sample.png" />
+    <None Include="Resources\buscar-otros.png" />
+    <None Include="Resources\rep_pos.gif" />
+    <None Include="Resources\rep_neg.gif" />
+    <None Include="Resources\icont83.png" />
+    <None Include="Resources\nekoarc_splash.png" />
+    <None Include="Resources\layers.png" />
+    <None Include="Resources\extractor_fuentes.png" />
+    <None Include="Resources\spinner_big.gif" />
+    <None Include="Resources\spinner.gif" />
+    <None Include="Resources\asistentetradu-saber.png" />
+    <None Include="Resources\harunyan.png" />
+    <Content Include="Hunspellx64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Hunspellx86.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ICSharpCode.SharpZipLib.dll" />
+    <Content Include="libcharset.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libebml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libiconv.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libmatroska.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MediaInfo.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MediaInfoWrapper.dll" />
+    <Content Include="Microsoft.DirectX.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mkvextract.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NHunspell.dll" />
+    <Content Include="pcrecpp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ASS.ico" />
+    <None Include="Resources\archivo_ass.ico" />
+    <None Include="Resources\spinner1.gif" />
+    <None Include="Resources\audio_tl.png" />
+    <None Include="Resources\spinner2.gif" />
+    <None Include="Resources\spinner %281%29.gif" />
+    <None Include="Resources\Spinner %282%29.gif" />
+    <Content Include="VSFilter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wyUpdate.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Video Menu\Resources\alignL.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Video Menu\Resources\alignR.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Video Menu\Resources\alignV.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Video Menu\Resources\playrange.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

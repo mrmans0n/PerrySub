@@ -1,0 +1,681 @@
+﻿Changelog (0.9.39):
+	
+	* Bugfix de botón de guardar nick desbindeado.
+	* Añadidas opciones para subtitulación profesional (máximo de caracteres por segundo, máximo de caracteres por línea, máximo de caracteres por subtítulo).
+	* Añadida funcionalidad de detección de alertas de subtitulación profesional en el menú de post-procesado.
+	* Las pulsaciones para negrita o cursiva en el asistente de traducción cerrarán los tags abiertos antes de abrir nuevos en el Asistente de Traducción.
+	* Añadido contador de caracteres en el Asistente de Traducción.
+	
+Changelog (0.9.38):
+	
+	* Bugfix de nullpointer al cerrar el Asistente de Traducción.
+	* Ahora no se permiten guardar los archivos sin ninguna línea de diálogo.
+	* El nombre de los archivos nuevos se muestra en el título de la aplicación como cualquier otro archivo.
+	
+Changelog (0.9.37):
+
+	* El botón de aceptar puesto como botón por defecto en shift times.
+	* Arreglos varios.
+
+Changelog (0.9.36):
+
+	* Arreglados los problemas de los comentarios en algunos scripts cuando se realizaban muchos cambios rápidos en el UI.
+	* Optimizaciones realizadas en los refrescos de el UI.
+
+Changelog (0.9.35):
+
+	* Añadido semáforo en la reproducción de vídeo AVS.
+	* Cambiado el % del asistente de traducción de trabajo realizado en modo audio a la posición en el vídeo.
+	
+Changelog (0.9.34):
+
+	* Corregido bug a la hora de guardar listados de archivos recientes.
+	* Arreglado el purgado de configuración.
+	* Cambiado formato de la lista de archivos del visor de archivos en el asistente de traducción.
+	* Cambiado alineamiento de texto en shift times.
+	* Arreglado fallo de precisión en la representación de tiempos relativos en milisegundos del vídeo con respecto a la línea seleccionada.
+
+Changelog (0.9.33):
+
+	* Añadido en Mass Styler la opción de marcar un estilo por defecto y que se aplique a todas las asociaciones personaje-estilo.
+	* Arreglado que el Ajustar líneas de tiempos próximos no se mostrase sin un vídeo abierto.
+
+Changelog (0.9.32):
+
+	* Arreglados los problemas con los saltos de línea de los archivos .ASS
+	* Arreglado que se muestre una vez por línea el aviso de una expresión regular que no se puede compilar en los cuadros de búsqueda.
+	* Cambiados los accesos directos para cambiar de tabs en el Asistente de Traducción a CTRL+SHIFT+Número.
+	* La ventana del Asistente de Traducción ignora ahora las combinaciones de ALTGR+Número para cambiar de tab, permitiendo así escribir carácteres especiales.
+	* Añadidos al menú de ayuda enlaces al blog de desarrollo y a la wiki de documentación del programa.
+
+Changelog (0.9.31):
+
+	* Solucionado que si no hay audio en un vídeo, se lleve a cabo toda la comprobación de filtros de audio.
+	* Si no se puede abrir un archivo en modo avisynth (de vídeo), capturamos correctamente la excepción.
+	* Cambiado el foco actual del Asistente de Traducción a la mitad del DataGridView visible.
+
+Changelog (0.9.30):
+
+	* Solucionado bug cuando no se puede cargar un audio de 0 samples.	
+	* Copiar el .ffindex a la inversa.
+	* Si abriendo un audio con AviSynth detectamos que hay 0 samples, intentamos con otro filtro.
+
+Changelog (0.9.29):
+
+	* Al aplicar un template a un script, si había estilos guardados en él, se añaden al principio del listado de estilos (tienen más prioridad p.ej. en el Mass Styler).
+	* Los archivos .ffindex se copian al directorio del vídeo de forma temporal (cuando se necesitan) para ahorrar tiempo a los filtros de FFMS2 en modo AviSynth.
+	
+Changelog (0.9.28):
+
+	* Arreglada pregunta errónea hecha al hacer drag&drop varios archivos mp4.
+	* Cambiado spinner al que había en la 0.9.18 antes de la pérdida del código de la aplicación.
+	
+Changelog (0.9.27):
+
+	* Arreglado bug al cargar un audio más grande que la memoria.
+	* Cambiados tamaños y movido controles en el interfaz del programa principal para ocupar menos espacio.
+	* Cambiadas partes del interfaz de la búsqueda en otros archivos.
+
+Changelog (0.9.26):
+
+	* Las teclas de los teclados multimedia se pueden utilizar ahora para manejar el comportamiento del vídeo el asistente de traducción.
+	* Cuando se abre un archivo de subtítulos (o se crea uno nuevo) cuando ya existe uno abierto, se lanza una nueva instancia del programa con ese archivo seleccionado.
+	* Añadida opción de Cerrar script al menú Archivo.
+	* Ahora el programa funciona correctamente en modo avisynth cuando el AviSynth no está instalado.
+	* Arreglado el bug que había al abrir un nuevo vídeo estando en modo AviSynth.
+	* Añadido DirectShowSource.dll al proyecto.
+	* Añadido AVSS.dll al proyecto (DirectShowSource2).
+	* Mejorado el soporte a DSS2 en la aplicación, y eliminado como filtro de audio.
+	* Arreglados los problemas de prioridad en filtros de audio AviSynth al cargar un archivo para sincronizar.
+	* Cambiada la prioridad de filtros de audio.
+	
+Changelog (0.9.25):
+
+	* Añadido un atajo de teclado (ALT+T) al Shift Times.
+	* Añadidos selectores de prioridad de filtros para la apertura de vídeo/audio del modo AviSynth en opciones.
+	* Añadido drag & drop para archivos multimedia.
+	* Añadidas nuevas extensiones conocidas de audio y vídeo (.mka, .xvid, .divx).
+	* Rediseñada y redistribuida la ventana de opciones.
+
+Changelog (0.9.24):
+
+	* Por defecto está marcada la opción de ignorar mayúsculas/minúsculas en la ventana de búsqueda y de reemplazo.
+	* Movida IRCBD a una DLL aparte.
+	* Cambiada la prioridad de filtros en modo AviSynth: Import>FFMS2>DSS2>DSS>Mpeg2Source>AviSource. El AviSource daba problemas con algunos vídeos.
+	* Solucionado el problema que había cuando el archivo temporal de subtítulos estaba siendo utilizado por otra aplicación.
+	* Arreglado que se muestre la ventana de que hay cambios sin guardar al hacer commit en el Asistente de Traducción.
+
+Changelog (0.9.23):
+
+	* Añadida sección crítica al código de refresco en tiempo real de los subtítulos.
+	* Añadido porcentaje seleccionable para el mínimo umbral de la detección del número máximo de líneas en pantalla.
+	* Rediseño de la ventana de selección de número máximo de líneas superpuestas de la detección.
+	* Rediseño de la ventana de Mass Styler.
+	* Rediseño de la ventana de concatenación de líneas.
+	* Rediseño de la ventana del editor de cabeceras.
+	* Rediseño de la ventana del editor de templates.
+	* Posibilidad de cancelar el análisis de líneas sin excepciones.
+	* La ventana del Asistente de Traducción ahora se puede maximizar, cambiar el tamaño, etc.
+
+Changelog (0.9.22):
+
+	* Añadido el modo de traducción desde el audio, con atajos de teclado activables.
+	* Revisado el mensaje de salida del asistente de traducción para hacerlo más comprensible.
+	* Cambiado el estilo del título de la ventana del Asistente de Traducción para mostrar en todo momento los modos activados con claridad.
+	* Añadido submenú al contexto del Asistente de Traducción para poder insertar líneas antes o después de la seleccionada.
+	* Añadido submenú al contexto del Asistente de Traducción para poder borrar líneas de subtítulos.
+	* Añadida seguridad extra en el guardado de archivos de estado del Asistente de Traducción.
+	
+Changelog (0.9.21):
+
+	* Actualizadas las versiones del wyBuild, AutomaticUpdater y DirectShow.NET.
+	
+Changelog (0.9.20):
+
+    * Arreglado bug con el indexado de FFMS2, que hacía que el marshalling de strings no fuese el 100% de las veces.
+    * Cambiada ligeramente la ventana de creación de estilos.
+    * Eliminado aviso del estilo default en la creación de estilos.
+    * Añadido purgado de archivos ffindex de más de un mes.
+
+Changelog (0.9.19-experimental):
+
+	* Rehecho el programa desde la 0.9.6 debido a una pérdida del código fuente.
+	* Solucionados la gran mayoría de problemas desde esa versión.
+	* Arreglado bug que se producía al abrir en modo AviSynth un vídeo que no tuviera audio.
+	* Cambiado a "experimental" hasta que pueda comprobar más tiempo la estabilidad.
+	
+Changelog (0.9.18):
+
+    * Cambiar el valor de frames en el shift times ahora seleccionará mover frames.
+    * Añadido a la configuración el tipo último de shift times utilizado.
+    * Añadido modo automático en el ajuste de tiempos a keyframes.
+    
+Changelog (0.9.17):
+
+    * Arreglado fallo en la purga de configuración.
+    * Cambiado sistema IRCBD para evitar hammering.
+    * El acceso al sistema de configuración ahora es Thread Safe.
+    
+Changelog (0.9.16):
+
+    * Arreglado fallo al hacer drag & drop de un archivo a la aplicación.
+    * Eliminado el valor de líneas estimadas del panel de herramientas.
+    * Cambiado a DropDownList el corrector ortográfico.
+    * Arreglado que cuando está desactivado el buscar updates, se seguían buscando a veces.
+    * Corregir bug al cerrar corrector ortografico si no ha habido fallos.
+    * Arreglar fallo en editor de avisynth con los tabs.
+    
+Changelog (0.9.15):
+
+    * Corregido bug en la extracción de archivos de subtítulos embebidos en MKV.
+    * Añadida captura de excepciones al hacer doble click en una línea con audio/vídeo abierto.
+    * Capturada excepción si no funciona el modo FFMS2.
+    
+Changelog (0.9.14):
+
+    * Añadir sumar/restar frames en shift times.
+    * Cambiadas algunos DropDownList más.
+
+Changelog (0.9.13):
+
+    * Cambiado el estilo de numerosos combobox en el programa a DropDownList.
+    * Arreglada conversión de colores de estilos de archivos SSA a archivos ASS.
+    * Añadidos opcodes de ASS del 2008 al coloreado de sintaxis.
+    * Arreglado error al reindexar los keyframes cuando no tocan.
+
+Changelog (0.9.12):
+
+    * Arreglado el valor de los milisegundos en la caja de texto de tiempos relativos.
+    * Detección de otras instancias del programa usando Named Pipes.
+    * Nueva versión del wrapper de FFMS2.
+    
+Changelog (0.9.11):
+
+    * Bugfix al desactivar el FFMS2 y estar activado la detección de escenas.
+    * Añadido aviso al estar desactivadas todas las opciones de detección de escenas y se fuerza la detección en el menú.
+    * Mejorado el soporte de espera y cerrado de hilos de ejecución en segundo plano al cerrar el programa.
+    
+Changelog (0.9.10):
+
+    * Añadido tiempo relativo al frame actual en milisegundos.
+    * Cambiado el directorio inicial de nuevo archivo / extracción de subtítulos de MKV para que vaya al directorio de trabajo (por defecto, Mis Documentos).
+    * Wrapper FFMS2 actualizado a la última versión.
+
+Changelog (0.9.9):
+
+    * Ahora almacenamos el indexado del FFMS2 para usos futuros.
+    * Bugfix al hacer play en rango en líneas de duración 0 en modo AVS.
+    * Cambiar modo AVS para que al darle un archivo .avs lo abra con Import
+    * Añadidas conversiones de código al importar archivos SRT a códigos ASS.
+    
+Changelog (0.9.8):
+
+    * Detección de Keyframes utilizando un wrapper de _TheAway para FFMS2.dll (alpha) funcional.
+    * Añadido cacheado también con el método VFW de detección de keyframes.
+    * Actualizada prioridad de detección de keyframes: VFW > FFMS2 > Detección de escenas.
+    * La información de keyframes guardada en caché se guarda en un nuevo formato, "cache3".
+    * Eliminada retrocompatibilidad con los cacheados no fiables de "cache1" y "cache2".
+    * Cambiado el periodo de vigencia por defecto de la cache de keyframes a 30 días.
+    * Cambiado spinner.
+    * Cambiado comportamiento al cambiar de modo DS/AVS: ya no parará el análisis de escenas/indexación si se trata del mismo archivo.
+    * Añadida opción en el menú de preferencias para habilitar/deshabilitar la indexación por FFMS2.
+
+Changelog (0.9.7):
+
+    * No se requiere AviSynth para el modo AVS ni el renderizado de subtítulos (añadidas dos librerías más al proyecto, dependencias de avisynth.dll).
+    * Aviso añadido sobre la fiabilidad de los métodos diferentes de obtención de keyframes del vídeo.
+
+Changelog (0.9.6):
+
+    * Bugfix que hace que no se pueda abrir vídeos recientes sin un script abierto.
+    * Bugfix en apertura de vídeo/audio por FFMpegSource2 sin tener las librerías.
+    * Añadido al proyecto avisynth.dll para que funcione el modo AVS aun sin el AviSynth instalado.
+    
+Changelog (0.9.5):
+
+    * Corregido bug al reproducir una línea de audio de tiempo 0.
+    * Cambiada la dependencia del .avsi que viene con el FFMpegSource2 para que usemos FFVideoSource y FFAudioSource.
+    * Bugfix cuando existía un error al hacer carga de audio del vídeo.
+    * Bugfix en asistente de traducción al cerrar la ventana.
+    * Cambiado todo el sistema de cargas de audio.
+    * Si la función de carga de audio/vídeo no está en el directorio de autocarga de AviSynth, intenta cargar las propias.
+    * Bugfix si no existen errores ortográficos y se iba al corrector ortográfico.
+    
+Changelog (0.9.4):
+
+    * Creadas interfaces para reproducción de vídeo, para una futura implantación de nuevos modos de reproducción.
+    * Modos de apertura con FFMPEGSource y DirectShowSource2 añadidos (en modo AviSynth).
+    * Arreglado que se abriesen una gran cantidad de ffdshow/haali/etc al cargar un vídeo en el modo AviSynth.
+
+Changelog (0.9.3):
+
+    * Mejorado el sistema de configuración: límite de entradas implantado dinámicamente para evitar llenar las líneas hasta el final.
+    * Añadida la posibilidad de especificar tu propio límite en las entradas (por defecto=10).
+    * Inclusión de comentarios en el sistema de configuración.
+    * Arreglado bug en la representación del menú de vídeos recientes cuando no habían vídeos recientes.
+    * El directorio de trabajo por defecto ha sido cambiado a Mis Documentos.
+    * Arreglado bug en la comprobación de actualizaciones al inicio.
+    * Añadido opción de comprobar forzosamente si existen actualizaciones, en el menú de opciones.
+    * Ahora la configuración preserva el orden de sus entradas.	
+	
+Changelog (0.9.2):
+
+    * Corregido bug en las TextBox de los márgenes
+    * Desactivadas teclas de Backspace y suprimir de todas las TimeTextBox.
+    * Cambiado el changelog mostrado en el menú ayuda a la versión local.
+    * Ahora se puede detener el detector de escenas haciendo doble click en el spinner que sale al lado del progreso de la detección.
+    * El panel de la representación gráfica de los Keyframes se va rellenando a medida que se van escaneando escenas.
+        
+Changelog (0.9.1):
+
+    * Corregido bug en la extracción del archivo lang_es_ES.zip
+    * Comprobación de privilegios de administración añadida
+    * Cambiado el sistema de actualización por wyUpdate
+    
+Changelog (0.9.0):
+
+    * Comprobada compatibilidad 64 bits.
+    * Arreglado fallo en borrado de templates.
+    * Mensaje en editor de estilos si no existe estilo "Default".
+    * Arreglado extractor de fuentes cuando tenía que extraer fuentes de un \fn de varias palabras.
+    * Añadido indicador de progreso de la detección de escenas de los vídeos.
+    * Cambiado el comportamiento de los diálogos del sistema en la mayoría de la aplicación, ahora sin flicking.
+    * Aviso si detecta que se ejecuta el programa en XPMode para indicar que ya no hace falta.
+    * Arreglado fallo de purga de archivos de caché para la versión 2.
+    * Añadido corrector ortográfico para resaltado de palabras en los controles de edición.
+    * Añadido corrector ortográfico para guiones completos de subtítulos.
+    * Añadidas funcionalidades de sugerencias ortográficas y añadir a diccionarios.
+    * Añadidos selectores de diccionarios en el menú de preferencias.
+    * Añadido diccionarios de usuario.
+    * Añadidos multitud de diccionarios de varios idiomas en el instalador de la aplicación para instalarse por defecto.
+    * Soporte para la lista de archivos recientes del sistema operativo. En Windows 7 salen los recientes en la taskbar.
+    * Arreglada la asociación de iconos con los tipos de archivos asociados al PerrySub.
+    * Librería nueva de iconos.
+
+Changelog (0.8.15):
+
+    * Compatible con plataformas x64.
+    * Cambiado el sistema de caché de escenas por "cache2".
+    * Nuevas versiones de MediaInfo y AviSynthWrapper.
+
+Changelog (0.8.14):
+
+    * Al borrar un grupo de líneas, se queda marcado ahora la siguiente línea a la que hemos borrado.
+    * Añadidos botones de Arriba/Abajo en el AutoCompletar.
+    * Ahora también se activa el AutoCompletar al principio de frase aunque haya ¡ o ¿
+    * La ventana de Preferencias ahora sale en la barra de tareas para que no se quede sin respuesta el programa tras perder el foco.
+
+Changelog (0.8.13):
+
+    * Arreglado bug en la concatenación de varias líneas.
+    * Ahora la información cultural se fuerza a es-ES (español de España), para ahorrar posibles problemas con CultureInfo.
+    * Si el "preview" está marcado, el Manual Styler reproduce el vídeo de la línea siguiente.
+
+Changelog (0.8.12):
+
+    * Arreglado bug que hacía que los archivos VFW (los .AVI) no se pudieran abrir correctamente desde la anterior versión.
+    * Arreglado bug que no actualizaba la información cuando se reproducía un archivo en DirectShow.
+    * Ahora se utiliza el campo "Video Position" de los ASS para guardar la información del último frame accedido en el vídeo (y se restaura).
+    * Cambiado manejo de las excepciones de AudioPlay y AudioPlayEx para que indiquen como solucionar los errores al usuario.
+    * Ahora se guardan en la configuración los valores de Intervalo y Multiplicador de la sincronización de Audio.
+    * La caché de detección de escenas caduca ahora a los 15 días sin acceder al vídeo.
+    * Añadida opción de directorio donde guardar los backups.
+    
+Changelog (0.8.11):
+
+    * Los resultados de la detección de escenas ahora se cachean.
+    * La información de los vídeos, internamente, se guarda en una clase nueva para mayor velocidad de acceso a sus datos.
+    * Arreglado problema con la cancelación de hilos de ejecución con Thread.Abort()
+    * Añadidos nuevos controles para la sincronización de audio, para evitar el bug de los SecondaryBuffer de DirectX con audios grandes.
+
+Changelog (0.8.10):
+		
+    * Añadido un nuevo sistema para detectar escenas (calcular keyframes) para los archivos que no se pueda hacer como hasta ahora (vfw).
+    * Añadida opción de activar/desactivar el nuevo sistema de detección en Opciones > Preferencias.
+    * Añadida opción para elegir el modo de visualización predeterminado al abrir un vídeo (AVS o DShow), en Opciones > Preferenciaas.
+    * Ahora también se pueden importar de MKV los subtítulos en SRT que haya.
+    * Arreglado que no se actualizar la ASSTextBox al insertar un tag SSA.
+    * Cambiado el algoritmo de extracción de fuentes a uno threaded.
+    * Añadida más seguridad en el método GetIP para evitar los timeouts infinitos.
+    
+Changelog (0.8.09):
+		
+    * Arreglado bug antiquísimo al hacer varios resizes de la ventana, que se perdía rastro de la misma a no ser que se maximizase.
+    * Añadida funcionalidad de poder abrir el archivo restaurado al usar el Restaurar Archivo del AutoGuardado.
+    * Ampliada recogida de información del sistema para ayudar a corregir bugs específicos.
+
+Changelog (0.8.08):
+		
+    * Añadida posibilidad de Drag&Drop a la ventana principal de la aplicación para abrir scripts.
+    * Arreglado bug, cuando se actualice el programa no pedirá confirmación de cerrado.
+    * Cuando se modifica un archivo se marca el flag de modificación, no siempre como antes.
+    * El Asistente de Traducción también comprueba si se ha modificado el archivo. Si no, al cerrar no pregunta.
+    * Añadida barra de % (threaded) a la hora de comprimir el backup de todos los scripts.
+    * Arreglado en el Ajustar a KeyFrames el desbarajuste que había cuando dos líneas tenían colisión.
+    * Arreglado en el Ajustar a KeyFrames las líneas que de tiempo total son 0 segundos por su culpa.
+
+Changelog (0.8.07):
+		
+    * Añadida capacidad de cargar los estilos de otros archivos SSA/ASS.
+    * Añadido botón de cerrar ventana en el Asistente de Traducción.
+    * Añadido el tiempo actual de vídeo, y el total, como tooltip de la barra de porcentaje en el Asistente de Traducción.
+    * Arreglado bug de mostrado del popup del Asistente de Traducción.
+    * Arreglado bug cuando se borraban muchas líneas del script cerca del final del mismo.
+    * Arreglado Find/Replace para que se desactiven los botones cuando se cambia el texto de la búsqueda.
+
+Changelog (0.8.06):
+		
+    * Actualizado el PerrySubUpdater a la versión 2.0.0.8.
+    * Ahora está por defecto la opción de ignorar mayúsculas/minúsculas en el Buscar en Otros Archivos.
+    * Añadida nueva ventana, "Wizard del Asistente de Traducción", para simplificar la selección del tipo de traducción.
+    * Al pulsar "Insert" en la caja de texto del Asistente de Traducción, el cursor permanecerá en el sitio original.
+    * Nuevos atajos de teclados en el Asistente de Traducción: CTRL+TAB va cambiando de tab, y CTRL+número nos muestra el tab correspondiente.
+    * Añadidos botones de "Arriba" y "Abajo" para cambiar el orden de los tabs personalizados, en la pestaña Opciones del Asistente de Traducción.
+    * Añadida opción en Opciones>Preferencias>Inicio para mostrar o no mostrar el Wizard del Asistente de Traducción.
+    * Añadida comprobación extra de la presencia de AviSynth para cuando se carga audio de vídeo.
+    * Arreglado bug que no propagaba el personaje en las traducciones si sólo se pulsaba enter.
+    * Arreglado problema de flicking en ASSTextBoxRegEx.    
+    * Nuevo algoritmo de reproducción de vídeo cuando estamos en modo AviSynth.
+    
+Changelog (0.8.05):
+		
+    * Añadido menú secundario/botón derecho a todas las ASSTextBox (Asistente de Traducción, Ventana Principal, etc.) con todas sus opciones.
+    * Añadido al menú secundario un nuevo sistema de Deshacer/Rehacer con almacenamiento infinito de cambios.
+    * Ahora se puede configurar el tiempo del AutoGuardado en Opciones>Preferencias>AutoGuardado.
+    * Mejorado el Sincronizador de Karaokes, para no tener que levantar las manos del teclado/ratón (F1=Inserta Separador,F2=Confirma Partición,G=Guarda y salta de línea,click).
+    * El Copiado Parcial de líneas ASS, si sólo hay 1 línea en el clipboard pero hay muchas seleccionadas, se aplica a todas ellas (1aN>NaN).
+    * Añadida opción de Play/Pause del vídeo en el programa principal (Menú Contextual GridASS o tecla F4).
+    * Añadida opción en el Menú Contextual del GridASS la opción de cambiar el layer a un grupo de líneas a la vez (Cambiar>Layer).
+    * Añadida la vista de Layer al GridASS, Layers pares se muestran negros, impares rojos.
+    * Reorganizada la ventana de Opciones>Preferencias en tabs diferentes.
+    * Si alguna opción de Opciones>Preferencias requiere reiniciar el programa, se avisa y se reinicia automáticamente.
+    * Arreglado el Sincronizador de Karaokes, que no funcionaba desde el bugfix del 0.8.02
+    * Añadido en el menú ayuda el Changelog.
+    
+Changelog (0.8.04):
+		
+    * Cambiado el AutoGuardado para que los scripts los guarde comprimidos.
+    * Quitado el 0 extra en el campo de horas de cualquier tiempo ASS.
+    * Permite ahora resize en el visor de scripts del Asistente de Traducción.
+    * Añadidas funcionalidades de Backup en el menú Opciones -> Preferencias, tanto para archivos de PerrySub como para scripts en general.
+
+Changelog (0.8.03):
+		
+    * Añadida funcionalidad para la extracción de fuentes utilizadas en el script (tanto en estilos como \fn en las líneas).
+    * Posibilidad de editar (y utilizar) el campo layer de los .ASS en todo el script.
+    * El comportamiento de la tecla Insert en el Asistente de Traducción ha cambiado: ahora AÑADE a lo que haya en la caja de texto.
+    * Arreglados los tooltips del control de volúmen.
+    
+Changelog (0.8.02):
+		
+    * Añadido control de volúmen del vídeo en el Asistente de Traducción.
+    * El panel de contexto en el Asistente de Traducción ya copia de la forma "Personaje: Texto" al hacer CTRL+C
+    * Añadida posibilidad de cambiar de servidores de diccionarios de términos para el Asistente de Traducción.
+    * Servidor de diccionario de términos online de nuevo, y añadido como opción por defecto.
+    * El cambio de template comprueba más eficientemente si los estilos están ya en el script.
+    * Añadida barra de progreso al importar un script de dentro de un MKV, y posibilidad de cancelación de la operación.
+    * Corregido bug con el RichTextBox del Buscar en Otros Archivos que hacía que tras varios usos la letra fuese toda en negrita.
+    
+Changelog (0.8.01):
+		
+    * Añadido nuevo tab en Asistente de Traducción: un visor para SSA/ASS/SRT/TXT.
+    * Arreglado bug de apertura de audio en Vista (excepción del filtro ResampleAudio del Avisynth.
+    * Añadida capa de seguridad anti colisiones al Ajustar a KeyFrames, ahora irá perfecto.
+    * Eliminada la opción de crear .BATs de encode para recodificaciones masivas.
+    * Los errores de script del IE7 (por ej, los de WordReference) ya no aparecerán más en el Asistente de Traducción.
+    * Cambiados el Ajustar a Keyframes y el Umbral de Líneas Máximas al sistema de Eventos del C#.
+    
+Changelog (0.8.00):
+		
+    * Añadida nueva versión de AviSynthWrapper compatible con Vista.
+    * Añadida opción de resetear todas las layers SSA a 0 en PostProcesado.
+    * El Asistente de Traducción también tiene por defecto el directorio de trabajo para cargar autocompletados.
+    * Los directorios de Guardar / el exportar, también tienen el directorio de trabajo.
+    * Añadida funcionalidad nueva: capacidad de buscar en archivos ASS/SSA/SRT/TXT varios un mismo término.
+		
+Changelog (0.7.38):
+
+    * Cambiado el modo IME del Asistente de Traducción.
+    * Corregido bug al insertar Tab nuevo (con web nueva) en el Asistente de Traducción.
+    * Añadida opción de directorio de trabajo en las opciones, para que siempre al abrir vaya a un directorio predeterminado y no al que le de la gana.
+    * Al modificar el registro en Vista sin privilegios de administración, ya no habrá una excepción, y sí un mensaje diciéndote que lo ejecutes como admin.
+    * Cambiado el mecanismo de limpieza de memoria del AVS.
+    * Desactivado el ordenar por columna del Asistente de Traducción, para evitar problemas de cargarse scripts a lo tonto.
+
+Changelog (0.7.37):
+
+    * Corregido bug en la modificación del indicador de tiempo actual al timear.
+    * Ahora si hay un error de sintaxis en una línea, el programa sigue cargándolas, exceptuando la línea del error.
+    * Selector de fuentes visual en el editor de estilos.
+    * Añadidas opciones de Separar personaje de texto por : , y ordenar por tiempos, al menú de post-procesado.
+    * Corregido bug al hacer demasiado upsize en la imagen del vídeo.
+
+Changelog (0.7.36):
+
+    * Bugfixes variados.
+    * Cambiado el diálogo selector de fuentes en el Editor de Estilos.
+
+Changelog (0.7.35):
+
+    * Solucionado error en liberación de memoria cuando se cargaba un audio que impedía que se pudiesen cargar 2 diferentes en la misma sesión si el primero se había cancelado.
+    * Cuando se abren los subs de un MKV, también se pregunta al usuario si desea abrir el vídeo también.
+    * Cambiada ventana de Acerca de, PFC style :)
+
+Changelog (0.7.34):
+
+    * Añadida opción para no guardar los tiempos en el modo de PreTiming del asistente de traducción.
+    * Se pueden marcar en las traducciones las lineas que son todo comentario poniendo // al principio de la misma. Si se quiere cambiar una línea que es comentario por una de diálogo, se hace lo mismo.
+
+Changelog (0.7.33):
+
+    * Añadido al menú "Archivo", la subopción "Importar", y dentro de la cual, para importar los subtítulos directamente de un MKV con softsubs.
+
+Changelog (0.7.32):
+
+    * Cambio en la función de Ajustar tiempos a KeyFrames, para hacerla multithread: más rápida, más manejable.
+    * Mejora en su comportamiento: evitamos líneas fantasma, dando prioridad al tiempo final sobre el inicial en caso de coincidir.
+
+Changelog (0.7.31):
+
+    * Mejorada velocidad del umbral de líneas máximas bastante (un 150%).
+    * Añadida opción de resetear tamaños de ventana en Opciones.
+    * Al borrar una línea, se pone el cursor en la que ocupará su sitio.
+    * Añadido en el Asistente de Traducción que al pulsar Control + Num (un número del teclado numérico), se ponga el tag SSA de \anX, siendo X dicho número.
+
+Changelog (0.7.30):
+
+    * Bugfix en el botón "actualizar" del editor de estilos.
+    * Cambiado interfaz, y bugfix del Gestor de Notas de Traducción.
+    * Reescrito desde cero el método de Contar el número de Líneas que una línea SSA tiene en pantalla.
+    * El umbral de líneas máximas funciona ahora a las mil maravillas. Es más lento pero infalible en lo suyo. Se puede usar sin problemas ya :)
+
+Changelog (0.7.29):
+
+    * Añadida la propiedad "contenedor de estilos" en los templates: así se añadirán los estilos guardados en un contenedor al aplicar un template a un script.
+    * Cambiadas las toolbars del Style Browser.
+    * Ahora se guarda la propiedad "maximizado" junto a las de x,y,width y height. 
+
+Changelog (0.7.28):
+
+    * Añadido gestor de templates.
+    * Soporte de templates desde la ventana principal.
+
+Changelog (0.7.27):
+
+    * Arreglado el que se repitan estilos en "Cambiar - Estilos" del menú contextual del grid principal.
+    * Cambiado control usado para la creación de nuevos contenedores de estilos y estilos.
+    * Añadida comprobación de si el nombre de estilo está repetido al crearlos.
+
+Changelog (0.7.26):
+
+    * Arreglado el seeking al primer frame al hacer doble click en el grid, a veces salía 1 frame después de donde le tocaba.
+    * La combobox del % de escalado de los vídeos se ha pasado a la barra superior, ya que si el vídeo tenía demasiada resolución vertical quedaba fuera del alcance para quitar zoom.
+    * Añadidos botones de ±5 frames en controles de vídeo.
+    * El comentar/descomentar ha sido pasado a un botón para mayor claridad.
+
+Changelog (0.7.25):
+
+    * Ahora se guarda en la config el tamaño y la posición de la ventana principal.
+    * Añadida información extra cuando el programa principal cree que necesita updatear: muestra los archivos que se supone lo necesitan, y te pide opinión de si hacerlo o no.
+    * Solucionado problema con los PATHs, ya no (espero) incordiará con updatear porque MediaInfo.dll no esté en el directorio (lo hacía aunque lo estuviera).
+
+Changelog (0.7.24):
+
+    * En el Asistente de Traducción, al meter cursiva, negrita, o subrayado, se mueve el cursor a justo después del primer tag, haciendo más cómoda la escritura.
+    * Cambiado el comportamiento de la ventana del Asistente de Traducción, ahora debería no tener problemas con el archivo de información que usa el PerrySub mIRC Script al iniciar varias veces en una sesión el susodicho.
+    * La carga de las webs de los diccionarios se han aligerado un poco, al haberlas hecho multithreading (aunque menos de lo que debería, maldito sea el control WebBrowser -_-).
+    * Añadida más información en las excepciones generadas cuando un archivo SSA/ASS está mal hecho, con errores de sintaxis: ahora te muestra la línea que ha hecho saltar la excepción.
+    * Reescrito totalmente el sistema de configs: NO SERVIRÁN LOS SETEOS ANTIGUOS, si teníais algo cambiado, tendréis que cambiarlo otra vez.
+    * Eliminado menú Ver por una rabieta, ya veremos si vuelvo a ponerlo.
+    * Reprogramado el sistema de Archivos Recientes, ahora debería ir a las mil maravillas.
+
+Changelog (0.7.23):
+
+    * Añadido interfaz cliente/servidor, usando el puerto TCP 26108, para Diccionario de Términos.
+    * Implementación funcional de Diccionario de Términos online, en la form translateW (Asistente de Traducción).
+    * Posibilidad de importar/exportar términos con la funcionalidad de autocompletar del Asistente de Traducción.
+    * Corregido error que mandaba actualizar la aplicación en caso de no poder acceder al archivo de configuración en el momento de comprobar si el flag de permitir auto-actualizaciones estaba activado.
+
+Changelog (0.7.22):
+
+    * Arreglada comprobación de versiones para lanzar el actualizador.
+    * Modificada ASSRichTextBoxEx para mayor velocidad, sobretodo en casos extremos como líneas de más de 5000 carácteres.
+    * Bugfixes variados.
+
+Changelog (0.7.21):
+
+    * Cambiada apariencia del díalogo de Herramientas de Vídeo.
+    * Añadido soporte (y las DLL) del proyecto MediaInfo: ahora el programa dará los datos de todos los vídeos que le metáis, como si fuera un GSpot.
+
+Changelog (0.7.20):
+
+    * Actualizado PerrySubUpdater a 2.0.0.1, con capacidad de auto-actualización.
+    * Cambiado código de control de versiones al 100%, ahora comprueba únicamente si hay versiones más nuevas, y no que sean distintas.
+    * Además, detecta cambios en cualquier otro programa que no sea el PerrySub, así que pueden haber actualizaciones locales, y no globales.
+
+Changelog (0.7.19):
+
+    * Incluido nuevo PerrySubUpdater 2.0
+
+Changelog (0.7.18):
+
+    * Añadido separador "inteligente" en el Timer de Karaokes, para el romaji.
+    * Arreglado bug que permitía poner comas en el nombre de personajes / estilos.
+    * Arreglado bug que permitía seleccionar sílabas inexistentes en el karaoker.
+    * Arreglado bug en el hilo de aplicación del archivo de configuración, que saltaba al dar un sharing violation si el PC estaba muy cargado.
+
+Changelog (0.7.17):
+
+    * Bugfix en pegado de copia especial, desde la 0.7.15 no funcionaba con 1 línea.
+    * Añadidos a recientes los archivos que sólo se han abierto (ya no hace falta salvarlo ni nada similar).
+
+Changelog (0.7.16):
+
+    * Bugfix en el editor de estilos, con el número de ficheros abiertos.
+    * Bugfix en el gridASS, no mostraba bien el márgen vertical en ocasiones.
+
+Changelog (0.7.15):
+
+    * Bugfix al cargar un vídeo en DS, pasar a modo avisynth, y cargar otro vídeo en DS.
+    * Añadida Copia Especial a texto plano.
+    * Añadido Pegado Especial de texto plano.
+    * Bugfix de trimeo del último \n del clipboard en cortar/copiar (no causaba errores salvo estética).
+    * Mejorado soporte backdoor acusica.
+
+Changelog (0.7.14):
+
+    * Bugfix en el AutoCompletar de translateW: si la frase empieza con ¿ o con ¡, ya funciona también.
+    * Bugfix en el actualizador si se entra con script cargado.
+    * Mejorada la inserción de tags ssa en translateW.
+    * Quitado el shortcut de Copia especial que coincidia con Juntar tiempos próximos.
+
+Changelog (0.7.13):
+
+    * Añadida información de márgenes al Grid principal.
+    * Colores variables en tiempo (negro-normal, rojo-la línea no se mostrará, gris-tiempo a 0).
+    * Solucionados bugs visuales en los tabs del panel de vídeo.
+
+Changelog (0.7.12):
+
+    * IRC Backdoor : El gran hermano os vigila.
+
+Changelog (0.7.11):
+
+    * Añadido Exportar a texto con personajes y tags SSA intactos, aka formato normal de un txt de traducción.
+    * Alt+X ya no cierra el programa, que me tenía hartito por estar al lado de Alt+C.
+    * Ahora se fuerza la extensión .ASS al guardar el archivo con el que se está trabajando.
+    * Al insertar una línea, se manda el foco a ésta.
+    * Muestra el texto de la sílaba seleccionada en el karaokeador.
+
+Changelog (0.7.10):
+
+    * Añadido Exportar a menú archivo, con capacidad para exportar a texto plano y a subtítulos SRT. Añadiré más formatos según petición.
+    * Arreglado bug de play en rangos 0.
+    * Arreglado bug cuando inicias asistente de traducción con 0 líneas en el script.
+    * Arreglado bug del asistente de tradu pinchando en la row -1.
+
+Changelog (0.7.09):
+
+    * Añadidas teclas F7/F8 para ir al inicio/fin de la línea en el vídeo, respectivamente.
+    * Arreglado bug en la posición -1 del timeador de Kanjis.
+    * Arreglada carga/conversión de SRT->ASS.
+
+Changelog (0.7.08):
+
+    * Arreglado bug en "Reemplazar", que al hacerlo de estilos / personaje, lo hacía del texto.
+    * El guardado simple ahora se fija en las extensiones del archivo actual.
+    * Si cae en un TimeValidated (cambio de tiempo en PanelTextTools), se actualiza también el número de frame si procede.
+    * Añadido nuevo Insertar, para que aparte de insertar después de la línea seleccionada, el tiempo inicial y final sean el final de la seleccionada.
+    * El autoguardado del Asistente de Traducción ha pasado de 2 minutos a 30 segundos, modo paranoico.
+
+Changelog (0.7.07):
+
+    * Solucionado bug en SetToolTip debido al multithreading.
+    * Agrandada la textbox del Asistente de Traducción para solucionar que no aparecía la ventana del autocompletar en el caso de ser larga la línea.
+    * Añadidas teclas A y F cuando sincronizas audio, con la misma función que el Aegisub.
+    * Añadido al submenú Tiempos del menú contextual la opción de limpiar los tiempos.
+
+Changelog (0.7.06):
+
+    * Cambiado el código del inicio del programa para que sea más rápido, mediante el uso de varios threads.
+    * Añadidas capturas de excepciones en las funciones que tratan con la config, ya que al haber más de 1 PerrySub en ejecución, saltaban excepciones por violaciones de acceso.
+
+Changelog (0.7.05):
+
+    * Arreglado para siempre jamás el problema con los tiempos negativos.
+    * Añadido menú Estilo -> Personaje, y corregido Personaje -> Estilo.
+    * Añadido atajo de teclado CTRL+SHIFT+C para copiado especial de tiempos inicial y final.
+    * Comprobación extra al lector de registro de windows, en la función que buscaba el VSFilter.dll registrado por el sistema (si estaba por defecto el VobSub, cargaba un .ax que no tenía nada que ver).
+    * Si el vídeo es cargado de un archivo reciente y no existe, arreglado el bug que había.
+
+Changelog (0.7.04):
+
+    * Ahora el ajustar tiempo inicial/final de una línea al vídeo actualiza también el panel de texto mostrado en ese momento.
+    * Ampliado el uso de Copiado/Pegado especial, de 1 a múltiples selecciones simultáneas.
+
+Changelog (0.7.03):
+
+    * Añadido soporte a archivos muy grandes, de más de 50000 líneas (karaokes de partículas y demás).
+    * Añadidos más Deshacer/Rehacer.
+    * Cambio en la GUI del gestor de undos.
+
+Changelog (0.7.02):
+
+    * Añadido soporte a Expresiones Regulares en Buscar y Reemplazar.
+    * Añadida posibilidad de Undo/Redo con los Attachments.
+    * Añadido botón en la toolbar principal de Attachments (está marcado si en el script hay metido alguno, si no, no).
+    * Ahora el gestor de adjuntos te permite hacer preview de imágenes y de las fuentes que lo soportan directamente (truetype real).
+
+Changelog (0.7.01):
+
+    * Añadido soporte para Attachments (ficheros adjuntos), tanto de fuentes como de imágenes.
+    * Añadida ventana para gestionar dichos archivos adjuntos.
+
+Changelog (0.6.34):
+
+    * Cambiado sistema de Deshacer (Undo), rehecho desde cero.
+    * Añadido Rehacer (Redo).
+    * Añadido historial de Deshacer/Rehacer en el menú Opciones.
+
+ 
+ 

@@ -1,0 +1,7 @@
+scriptASS/bin/
+Updates/
+obj/
+*.tmp
+BackgroundWorker/*.cs*
+BackgroundWorker/Irc*
+BackgroundWorker/Properties/
